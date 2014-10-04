@@ -6,6 +6,8 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Kereta.Dominio.Frota.MarcaAgg;
+using Kereta.Dominio.Frota.ModeloAgg;
 using Kereta.Infraestrutura.Data.Frota;
 using Kereta.Infraestrutura.Data.Migrations;
 using Kereta.Migrations;
@@ -41,9 +43,9 @@ namespace Kereta.Infraestrutura.Data.Unit
 
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            
-            modelBuilder.Configurations.Add(new MarcaEntityTypeConfiguration());
 
+            modelBuilder.Configurations.Add(new MarcaEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new ModeloEntityTypeConfiguration());
 
         }
     }

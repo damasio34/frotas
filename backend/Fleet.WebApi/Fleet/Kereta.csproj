@@ -74,12 +74,13 @@
     <Compile Include="Dominio\Manutencao\SistemaAgg\Sistema.cs" />
     <Compile Include="Dominio\Refectory\EntidadeIdNome.cs" />
     <Compile Include="Dominio\Refectory\EntityBase.cs" />
-    <Compile Include="Infraestrutura.Data\Class1.cs" />
+    <Compile Include="Infraestrutura.Data\KeretaRepository.cs" />
     <Compile Include="Infraestrutura.Data\Frota\MarcaEntityTypeConfiguration.cs" />
     <Compile Include="Infraestrutura.Data\KeretaUnitOfWork.cs" />
-    <Compile Include="Infraestrutura.Data\Migrations\Class1.cs" />
-    <Compile Include="Infraestrutura.Data\Migrations\Class2.cs" />
+    <Compile Include="Infraestrutura.Data\Migrations\CreateDatabaseIfNotExistsInitializer.cs" />
+    <Compile Include="Infraestrutura.Data\Migrations\SeedDatabase.cs" />
     <Compile Include="Infraestrutura.Data\Migrations\Configuration.cs" />
+    <Compile Include="Infraestrutura.Data\Migrations\ExtentionDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

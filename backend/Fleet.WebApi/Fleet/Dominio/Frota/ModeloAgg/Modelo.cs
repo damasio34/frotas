@@ -7,12 +7,28 @@ namespace Kereta.Dominio.Frota.ModeloAgg
 
     public class Modelo : EntityBase
     {
-        public Guid IdMarca { get; set; }
-        public Marca Marca { get; set; }
+        public Guid IdMarca { get; protected set; }
+        public Marca Marca { get; protected set; }
+
+        public string Nome { get; set; }
+
+        public void AlterarMarca(Marca marca)
+        {
+            ThrowIsNullOrTransient(marca);
+
+            Marca = marca;
+            IdMarca = marca.Id;
+        }
 
         public int QuantidadeDeEstepes { get; set; }
-
         public string Layout { get; set; }
+
+        public Modelo(Marca marca, int quantidade, string nome)
+        {
+            AlterarMarca(marca);
+            QuantidadeDeEstepes = quantidade;
+            Nome= nome;
+        }
 
     }
 
