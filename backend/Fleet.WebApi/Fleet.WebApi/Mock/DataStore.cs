@@ -1,10 +1,8 @@
-﻿using Fleet.WebApi.Dto;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Kereta.Web.Api.Dto;
 
-namespace Fleet.WebApi.Mock
+namespace Kereta.Web.Api.Mock
 {
 
     public class DataStore 

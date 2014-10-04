@@ -1,11 +1,7 @@
-﻿using Fleet.WebApi.Dto;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Nancy;
 
-namespace Fleet.WebApi.Configurations
+namespace Kereta.Web.Api.Configurations
 {
     public enum TipoMensagem
     {

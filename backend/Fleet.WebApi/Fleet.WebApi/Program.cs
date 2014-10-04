@@ -1,8 +1,8 @@
-﻿namespace Fleet.WebApi
-{
-    using System;
-    using Nancy.Hosting.Self;
+﻿using System;
+using Nancy.Hosting.Self;
 
+namespace Kereta.Web.Api
+{
     class Program
     {
         static void Main(string[] args)

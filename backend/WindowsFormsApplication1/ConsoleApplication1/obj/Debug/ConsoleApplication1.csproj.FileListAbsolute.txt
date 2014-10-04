@@ -1,0 +1,6 @@
+D:\Versionamento\github\frotas\backend\WindowsFormsApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Versionamento\github\frotas\backend\WindowsFormsApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Versionamento\github\frotas\backend\WindowsFormsApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Versionamento\github\frotas\backend\WindowsFormsApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Versionamento\github\frotas\backend\WindowsFormsApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\Versionamento\github\frotas\backend\WindowsFormsApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

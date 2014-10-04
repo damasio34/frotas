@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kereta.Web.Api", "Fleet.WebApi\Kereta.Web.Api.csproj", "{F8A5A9AD-F680-46F4-806F-653E7E51A030}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kereta", "Fleet\Kereta.csproj", "{4FA80174-F325-4B7E-A974-C70B3B719D52}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Arquitetura", "Arquitetura\Arquitetura.modelproj", "{3F44F26C-D7BE-4FCC-9C3C-EDAC03F0C7D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seedwork", "Seedwork\Seedwork.csproj", "{DA107A8E-32FE-45C3-BAC2-F258B81AE8DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8A5A9AD-F680-46F4-806F-653E7E51A030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A5A9AD-F680-46F4-806F-653E7E51A030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A5A9AD-F680-46F4-806F-653E7E51A030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A5A9AD-F680-46F4-806F-653E7E51A030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA80174-F325-4B7E-A974-C70B3B719D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA80174-F325-4B7E-A974-C70B3B719D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA80174-F325-4B7E-A974-C70B3B719D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA80174-F325-4B7E-A974-C70B3B719D52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F44F26C-D7BE-4FCC-9C3C-EDAC03F0C7D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F44F26C-D7BE-4FCC-9C3C-EDAC03F0C7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F44F26C-D7BE-4FCC-9C3C-EDAC03F0C7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F44F26C-D7BE-4FCC-9C3C-EDAC03F0C7D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA107A8E-32FE-45C3-BAC2-F258B81AE8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA107A8E-32FE-45C3-BAC2-F258B81AE8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA107A8E-32FE-45C3-BAC2-F258B81AE8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA107A8E-32FE-45C3-BAC2-F258B81AE8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

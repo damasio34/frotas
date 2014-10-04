@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Fleet.WebApi.Dto
+﻿namespace Kereta.Web.Api.Dto
 {
     public class VeiculoDto : DataTransferObject
     {

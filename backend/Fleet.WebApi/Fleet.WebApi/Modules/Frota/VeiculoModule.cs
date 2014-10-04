@@ -1,12 +1,8 @@
-﻿using Fleet.WebApi.Dto;
-using Fleet.WebApi.Mock;
+﻿using Kereta.Web.Api.Dto;
+using Kereta.Web.Api.Mock;
 using Nancy;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace Fleet.WebApi.Modules
+namespace Kereta.Web.Api.Modules.Frota
 {
     public class VeiculoModule : NancyModule
     {

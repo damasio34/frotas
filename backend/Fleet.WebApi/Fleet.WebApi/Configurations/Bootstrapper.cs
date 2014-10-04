@@ -1,13 +1,9 @@
-﻿using Fleet.WebApi.Mock;
+﻿using Kereta.Web.Api.Mock;
 using Nancy;
 using Nancy.Bootstrapper;
 using Nancy.TinyIoc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace Fleet.WebApi
+namespace Kereta.Web.Api.Configurations
 {
     public class Bootstrapper : DefaultNancyBootstrapper
     {

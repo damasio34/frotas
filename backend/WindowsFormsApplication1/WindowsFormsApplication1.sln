@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{41439928-5FDF-4B3D-982F-58FA9BA780F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{7359AE88-B55B-4E4A-BC0C-F018A428ED21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleCloundPrinterApi", "GoogleCloundPrinterApi\GoogleCloundPrinterApi.csproj", "{8187EF55-53DF-4D0C-893E-0C8162D5E68F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleCloundPrinterApiTest", "GoogleCloundPrinterApiTest\GoogleCloundPrinterApiTest.csproj", "{C272EA37-5D61-43DD-9EBC-6CD6847916F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41439928-5FDF-4B3D-982F-58FA9BA780F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41439928-5FDF-4B3D-982F-58FA9BA780F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41439928-5FDF-4B3D-982F-58FA9BA780F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41439928-5FDF-4B3D-982F-58FA9BA780F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7359AE88-B55B-4E4A-BC0C-F018A428ED21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7359AE88-B55B-4E4A-BC0C-F018A428ED21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7359AE88-B55B-4E4A-BC0C-F018A428ED21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7359AE88-B55B-4E4A-BC0C-F018A428ED21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8187EF55-53DF-4D0C-893E-0C8162D5E68F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8187EF55-53DF-4D0C-893E-0C8162D5E68F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8187EF55-53DF-4D0C-893E-0C8162D5E68F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8187EF55-53DF-4D0C-893E-0C8162D5E68F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C272EA37-5D61-43DD-9EBC-6CD6847916F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C272EA37-5D61-43DD-9EBC-6CD6847916F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C272EA37-5D61-43DD-9EBC-6CD6847916F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C272EA37-5D61-43DD-9EBC-6CD6847916F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

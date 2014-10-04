@@ -1,0 +1,5 @@
+D:\Versionamento\github\frotas\backend\WindowsFormsApplication1\GoogleCloundPrinterApi\bin\Debug\GoogleCloundPrinterApi.dll
+D:\Versionamento\github\frotas\backend\WindowsFormsApplication1\GoogleCloundPrinterApi\bin\Debug\GoogleCloundPrinterApi.pdb
+D:\Versionamento\github\frotas\backend\WindowsFormsApplication1\GoogleCloundPrinterApi\obj\Debug\GoogleCloundPrinterApi.csprojResolveAssemblyReference.cache
+D:\Versionamento\github\frotas\backend\WindowsFormsApplication1\GoogleCloundPrinterApi\obj\Debug\GoogleCloundPrinterApi.dll
+D:\Versionamento\github\frotas\backend\WindowsFormsApplication1\GoogleCloundPrinterApi\obj\Debug\GoogleCloundPrinterApi.pdb
