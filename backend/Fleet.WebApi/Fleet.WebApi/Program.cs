@@ -12,6 +12,7 @@ namespace Kereta.Web.Api
 
             using (var host = new NancyHost(uri))
             {
+                Effort.Provider.EffortProviderConfiguration.RegisterProvider();
                 
                 host.Start();
 

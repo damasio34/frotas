@@ -11,6 +11,8 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Arquitetura", "Arquitetura\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seedwork", "Seedwork\Seedwork.csproj", "{DA107A8E-32FE-45C3-BAC2-F258B81AE8DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.EF", "..\..\..\..\tfs\vvs\Arquitetura\Infraestrutura\Data.EF\1-Dev\Data.EF\Data.EF.csproj", "{B0728FA9-2DB4-4118-9843-E507C7FCCF69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DA107A8E-32FE-45C3-BAC2-F258B81AE8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA107A8E-32FE-45C3-BAC2-F258B81AE8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA107A8E-32FE-45C3-BAC2-F258B81AE8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0728FA9-2DB4-4118-9843-E507C7FCCF69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0728FA9-2DB4-4118-9843-E507C7FCCF69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0728FA9-2DB4-4118-9843-E507C7FCCF69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0728FA9-2DB4-4118-9843-E507C7FCCF69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

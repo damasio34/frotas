@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Autentica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idGrupoEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutenticaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AutenticaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaSessao">
+        <s:complexType />
+      </s:element>
+      <s:element name="VerificaSessaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerificaSessaoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AutenticaSoapIn">
+    <wsdl:part name="parameters" element="tns:Autentica" />
+  </wsdl:message>
+  <wsdl:message name="AutenticaSoapOut">
+    <wsdl:part name="parameters" element="tns:AutenticaResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificaSessaoSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificaSessao" />
+  </wsdl:message>
+  <wsdl:message name="VerificaSessaoSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificaSessaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutenticaHttpGetIn">
+    <wsdl:part name="idGrupoEmpresa" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutenticaHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="VerificaSessaoHttpGetIn" />
+  <wsdl:message name="VerificaSessaoHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AutenticaHttpPostIn">
+    <wsdl:part name="idGrupoEmpresa" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutenticaHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="VerificaSessaoHttpPostIn" />
+  <wsdl:message name="VerificaSessaoHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="wsAutenticadorSoap">
+    <wsdl:operation name="Autentica">
+      <wsdl:input message="tns:AutenticaSoapIn" />
+      <wsdl:output message="tns:AutenticaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaSessao">
+      <wsdl:input message="tns:VerificaSessaoSoapIn" />
+      <wsdl:output message="tns:VerificaSessaoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsAutenticadorHttpGet">
+    <wsdl:operation name="Autentica">
+      <wsdl:input message="tns:AutenticaHttpGetIn" />
+      <wsdl:output message="tns:AutenticaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaSessao">
+      <wsdl:input message="tns:VerificaSessaoHttpGetIn" />
+      <wsdl:output message="tns:VerificaSessaoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsAutenticadorHttpPost">
+    <wsdl:operation name="Autentica">
+      <wsdl:input message="tns:AutenticaHttpPostIn" />
+      <wsdl:output message="tns:AutenticaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaSessao">
+      <wsdl:input message="tns:VerificaSessaoHttpPostIn" />
+      <wsdl:output message="tns:VerificaSessaoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsAutenticadorSoap" type="tns:wsAutenticadorSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Autentica">
+      <soap:operation soapAction="http://tempuri.org/Autentica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaSessao">
+      <soap:operation soapAction="http://tempuri.org/VerificaSessao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsAutenticadorSoap12" type="tns:wsAutenticadorSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Autentica">
+      <soap12:operation soapAction="http://tempuri.org/Autentica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaSessao">
+      <soap12:operation soapAction="http://tempuri.org/VerificaSessao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsAutenticadorHttpGet" type="tns:wsAutenticadorHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Autentica">
+      <http:operation location="/Autentica" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaSessao">
+      <http:operation location="/VerificaSessao" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsAutenticadorHttpPost" type="tns:wsAutenticadorHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Autentica">
+      <http:operation location="/Autentica" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaSessao">
+      <http:operation location="/VerificaSessao" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsAutenticador">
+    <wsdl:port name="wsAutenticadorSoap" binding="tns:wsAutenticadorSoap">
+      <soap:address location="http://www.cplusanywhere.com.br/wsAutenticador.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsAutenticadorSoap12" binding="tns:wsAutenticadorSoap12">
+      <soap12:address location="http://www.cplusanywhere.com.br/wsAutenticador.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsAutenticadorHttpGet" binding="tns:wsAutenticadorHttpGet">
+      <http:address location="http://www.cplusanywhere.com.br/wsAutenticador.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsAutenticadorHttpPost" binding="tns:wsAutenticadorHttpPost">
+      <http:address location="http://www.cplusanywhere.com.br/wsAutenticador.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

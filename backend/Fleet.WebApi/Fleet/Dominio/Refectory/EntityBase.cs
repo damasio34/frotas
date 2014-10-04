@@ -25,6 +25,13 @@ namespace Kereta.Dominio.Refectory
             entity.GenerateNewIdentity();
             return entity;
         }
+
+        public static T ChangeIdentityAndReturn<T>(this T entity, Guid id)
+            where T : EntityBase
+        {
+            entity.ChangeIdentity(id);
+            return entity;
+        }
     }
     public class EntityBase
     {

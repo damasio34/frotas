@@ -30,15 +30,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Effort">
+      <HintPath>..\packages\Effort.EF6.1.1.0\lib\net45\Effort.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="NMemory">
+      <HintPath>..\packages\NMemory.1.0.0\lib\net45\NMemory.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,12 +74,16 @@
     <Compile Include="Dominio\Manutencao\SistemaAgg\Sistema.cs" />
     <Compile Include="Dominio\Refectory\EntidadeIdNome.cs" />
     <Compile Include="Dominio\Refectory\EntityBase.cs" />
-    <Compile Include="Infraestrutura.Data\UnitOfWork\DbContext.cs" />
+    <Compile Include="Infraestrutura.Data\Class1.cs" />
+    <Compile Include="Infraestrutura.Data\Frota\MarcaEntityTypeConfiguration.cs" />
+    <Compile Include="Infraestrutura.Data\KeretaUnitOfWork.cs" />
+    <Compile Include="Infraestrutura.Data\Migrations\Class1.cs" />
+    <Compile Include="Infraestrutura.Data\Migrations\Class2.cs" />
+    <Compile Include="Infraestrutura.Data\Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Aplicacao\" />
-    <Folder Include="Infraestrutura.Data\UnitOfWork\Frota\" />
     <Folder Include="Infraestrutura\" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +91,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\tfs\vvs\Arquitetura\Infraestrutura\Data.EF\1-Dev\Data.EF\Data.EF.csproj">
+      <Project>{B0728FA9-2DB4-4118-9843-E507C7FCCF69}</Project>
+      <Name>Data.EF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Seedwork\Seedwork.csproj">
       <Project>{da107a8e-32fe-45c3-bac2-f258b81ae8dc}</Project>
       <Name>Seedwork</Name>

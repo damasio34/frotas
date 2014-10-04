@@ -10,3 +10,9 @@ D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet\bin\Debug\Vvs.Domain.S
 D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet\bin\Debug\Vvs.Domain.Seedwork.pdb
 D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet\bin\Debug\EntityFramework.xml
 D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet\bin\Debug\EntityFramework.SqlServer.xml
+D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet\bin\Debug\Vvs.Infraestrutura.Data.EF.dll
+D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet\bin\Debug\Vvs.Infraestrutura.Data.EF.pdb
+D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet\bin\Debug\Effort.dll
+D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet\bin\Debug\NMemory.dll
+D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet\bin\Debug\Effort.xml
+D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet\bin\Debug\NMemory.xml

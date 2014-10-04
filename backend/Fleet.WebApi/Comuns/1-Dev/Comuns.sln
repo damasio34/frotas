@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes Unitários", "Testes Unitários", "{839ADB5F-768F-46B2-8E24-8FA971B956F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{10CE3FB7-3523-4EA2-86A5-AA6103CA06E5}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comuns", "Comuns\Comuns.csproj", "{AAE37CA7-579E-42D6-8EBC-82AADE128042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comuns.Implementacao", "Comuns.Implementacao\Comuns.Implementacao.csproj", "{F5400210-DF83-495A-BA90-3825D7236F21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comuns.Tests", "Comuns.Test\Comuns.Tests.csproj", "{8ED46E2E-24AA-4776-AFBA-BECEE861169D}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://servidor-csharp:8080/tfs/csharp
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Comuns\\Comuns.csproj
+		SccProjectName1 = Comuns
+		SccLocalPath1 = Comuns
+		SccProjectUniqueName2 = Comuns.Implementacao\\Comuns.Implementacao.csproj
+		SccProjectName2 = Comuns.Implementacao
+		SccLocalPath2 = Comuns.Implementacao
+		SccProjectUniqueName3 = Comuns.Test\\Comuns.Tests.csproj
+		SccProjectTopLevelParentUniqueName3 = Comuns.sln
+		SccProjectName3 = Comuns.Test
+		SccLocalPath3 = Comuns.Test
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAE37CA7-579E-42D6-8EBC-82AADE128042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE37CA7-579E-42D6-8EBC-82AADE128042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE37CA7-579E-42D6-8EBC-82AADE128042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE37CA7-579E-42D6-8EBC-82AADE128042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5400210-DF83-495A-BA90-3825D7236F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5400210-DF83-495A-BA90-3825D7236F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5400210-DF83-495A-BA90-3825D7236F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5400210-DF83-495A-BA90-3825D7236F21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ED46E2E-24AA-4776-AFBA-BECEE861169D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ED46E2E-24AA-4776-AFBA-BECEE861169D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ED46E2E-24AA-4776-AFBA-BECEE861169D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ED46E2E-24AA-4776-AFBA-BECEE861169D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8ED46E2E-24AA-4776-AFBA-BECEE861169D} = {839ADB5F-768F-46B2-8E24-8FA971B956F7}
+	EndGlobalSection
+EndGlobal
