@@ -14,10 +14,15 @@ namespace Kereta.Infraestrutura.Data.Migrations
     {
         public void Seed(DbContext context)
         {
-            var marcas = CriarMarcas().ToList();
+            var marcas = CriarMarcas().ToArray();
             context.Update(marcas);
 
-            //context.Update(CriarModelos(marcas).ToArray());
+            var modelo1 = new Modelo(marcas.First(), 10, "Modelo 01").ChangeIdentityAndReturn(Guid.Parse("61699CBA-752A-4CDF-8B91-745667B3D76E"));
+            var modelo2 = new Modelo(marcas.Last(), 10, "Modelo 02").ChangeIdentityAndReturn(Guid.Parse("D1518251-C31B-4A93-AB4C-225B2F1B6FB0"));
+
+            context.Update(modelo1, modelo2);
+
+
         }
 
         private IEnumerable<Marca> CriarMarcas()

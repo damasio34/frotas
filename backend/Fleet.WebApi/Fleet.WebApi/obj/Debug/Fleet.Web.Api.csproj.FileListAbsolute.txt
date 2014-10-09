@@ -1,9 +1,0 @@
-D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet.WebApi\bin\Debug\Fleet.Web.Api.exe
-D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet.WebApi\bin\Debug\Fleet.Web.Api.pdb
-D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet.WebApi\bin\Debug\Nancy.dll
-D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet.WebApi\bin\Debug\Nancy.Hosting.Self.dll
-D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet.WebApi\bin\Debug\Nancy.xml
-D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet.WebApi\bin\Debug\Nancy.Hosting.Self.xml
-D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet.WebApi\obj\Debug\Fleet.Web.Api.csprojResolveAssemblyReference.cache
-D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet.WebApi\obj\Debug\Fleet.Web.Api.exe
-D:\Versionamento\github\frotas\backend\Fleet.WebApi\Fleet.WebApi\obj\Debug\Fleet.Web.Api.pdb

@@ -8,6 +8,8 @@ namespace Kereta.Dominio.Manutencao.SistemaAgg
 {
     public class SubSistema : EntityBase
     {
+        [Obsolete("EntityFramework")]
+        protected SubSistema() { }
         public string Nome { get; set; }
     }
 }

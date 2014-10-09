@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kereta.Web.Api", "Fleet.WebApi\Kereta.Web.Api.csproj", "{F8A5A9AD-F680-46F4-806F-653E7E51A030}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kereta", "Fleet\Kereta.csproj", "{4FA80174-F325-4B7E-A974-C70B3B719D52}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Arquitetura", "Arquitetura\Arquitetura.modelproj", "{3F44F26C-D7BE-4FCC-9C3C-EDAC03F0C7D8}"
@@ -13,16 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seedwork", "Seedwork\Seedwo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.EF", "..\..\..\..\tfs\vvs\Arquitetura\Infraestrutura\Data.EF\1-Dev\Data.EF\Data.EF.csproj", "{B0728FA9-2DB4-4118-9843-E507C7FCCF69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kereta.Web.Api", "Kereta.Web.Api\Kereta.Web.Api.csproj", "{D03C0D65-7736-462E-9B9B-041B4BA5F65E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F8A5A9AD-F680-46F4-806F-653E7E51A030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8A5A9AD-F680-46F4-806F-653E7E51A030}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8A5A9AD-F680-46F4-806F-653E7E51A030}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8A5A9AD-F680-46F4-806F-653E7E51A030}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4FA80174-F325-4B7E-A974-C70B3B719D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4FA80174-F325-4B7E-A974-C70B3B719D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FA80174-F325-4B7E-A974-C70B3B719D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{B0728FA9-2DB4-4118-9843-E507C7FCCF69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0728FA9-2DB4-4118-9843-E507C7FCCF69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0728FA9-2DB4-4118-9843-E507C7FCCF69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D03C0D65-7736-462E-9B9B-041B4BA5F65E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D03C0D65-7736-462E-9B9B-041B4BA5F65E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D03C0D65-7736-462E-9B9B-041B4BA5F65E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D03C0D65-7736-462E-9B9B-041B4BA5F65E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,8 +7,10 @@ namespace Kereta.Dominio.Frota.ModeloAgg
 
     public class Modelo : EntityBase
     {
+        [Obsolete("EntityFramework")]
+        protected Modelo() { }
         public Guid IdMarca { get; protected set; }
-        public Marca Marca { get; protected set; }
+        public virtual Marca Marca { get; protected set; }
 
         public string Nome { get; set; }
 

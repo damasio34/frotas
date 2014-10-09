@@ -1,4 +1,5 @@
 D:\Versionamento\github\frotas\backend\Fleet.WebApi\Seedwork\bin\Debug\Vvs.Domain.Seedwork.dll
 D:\Versionamento\github\frotas\backend\Fleet.WebApi\Seedwork\bin\Debug\Vvs.Domain.Seedwork.pdb
+D:\Versionamento\github\frotas\backend\Fleet.WebApi\Seedwork\obj\Debug\Seedwork.csprojResolveAssemblyReference.cache
 D:\Versionamento\github\frotas\backend\Fleet.WebApi\Seedwork\obj\Debug\Vvs.Domain.Seedwork.dll
 D:\Versionamento\github\frotas\backend\Fleet.WebApi\Seedwork\obj\Debug\Vvs.Domain.Seedwork.pdb

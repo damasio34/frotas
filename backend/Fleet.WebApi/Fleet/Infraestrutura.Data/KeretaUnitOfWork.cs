@@ -1,29 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Common;
+﻿using System.Data.Common;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Kereta.Dominio.Frota.MarcaAgg;
-using Kereta.Dominio.Frota.ModeloAgg;
 using Kereta.Infraestrutura.Data.Frota;
 using Kereta.Infraestrutura.Data.Migrations;
-using Kereta.Migrations;
-using Vvs.Domain.Seedwork.UnitOfWork;
 using Vvs.Infraestrutura.Data.EF;
 
-namespace Kereta.Infraestrutura.Data.Unit
+namespace Kereta.Infraestrutura.Data
 {
-    public interface IKeretaUnitOfWork : IUnitOfWork
-    {
-        
-    }
-    public class KeretaUnitOfWork : UnitOfWork, IKeretaUnitOfWork
+    
+    public class KeretaUnitOfWork : UnitOfWork
     {
         public KeretaUnitOfWork()
-            : base(Effort.DbConnectionFactory.CreateTransient(), true)
+            : base()
         {
 
             Database.SetInitializer(new CreateDatabaseIfNotExistsInitializer());
@@ -44,8 +32,8 @@ namespace Kereta.Infraestrutura.Data.Unit
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
-            modelBuilder.Configurations.Add(new MarcaEntityTypeConfiguration());
-            modelBuilder.Configurations.Add(new ModeloEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new MarcaDbMapping());
+            modelBuilder.Configurations.Add(new ModeloDbMapping());
 
         }
     }

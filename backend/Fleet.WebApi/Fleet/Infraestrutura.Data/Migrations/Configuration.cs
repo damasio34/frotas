@@ -1,18 +1,7 @@
-using System.Collections.Generic;
-using Kereta.Dominio.Frota.MarcaAgg;
-using Kereta.Dominio.Refectory;
-using Kereta.Infraestrutura.Data.Migrations;
-using Kereta.Infraestrutura.Data.Unit;
+using System.Data.Entity.Migrations;
 
-namespace Kereta.Migrations
+namespace Kereta.Infraestrutura.Data.Migrations
 {
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-
-    
-
     internal sealed class Configuration : DbMigrationsConfiguration<KeretaUnitOfWork>
     {
         public Configuration()

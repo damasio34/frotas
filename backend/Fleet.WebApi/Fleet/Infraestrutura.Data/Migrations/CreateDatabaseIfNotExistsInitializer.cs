@@ -4,7 +4,6 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Kereta.Infraestrutura.Data.Unit;
 
 namespace Kereta.Infraestrutura.Data.Migrations
 {

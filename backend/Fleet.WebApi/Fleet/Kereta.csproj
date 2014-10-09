@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\ReadOnlyCollection.cs" />
     <Compile Include="Dominio\Frota\VeiculoAgg\Cavalo.cs" />
     <Compile Include="Dominio\Frota\VeiculoAgg\CombustivelDoVeiculo.cs" />
     <Compile Include="Dominio\Frota\VeiculoAgg\Implemento.cs" />
@@ -75,7 +76,7 @@
     <Compile Include="Dominio\Refectory\EntidadeIdNome.cs" />
     <Compile Include="Dominio\Refectory\EntityBase.cs" />
     <Compile Include="Infraestrutura.Data\KeretaRepository.cs" />
-    <Compile Include="Infraestrutura.Data\Frota\MarcaEntityTypeConfiguration.cs" />
+    <Compile Include="Infraestrutura.Data\Frota\DbMapping.cs" />
     <Compile Include="Infraestrutura.Data\KeretaUnitOfWork.cs" />
     <Compile Include="Infraestrutura.Data\Migrations\CreateDatabaseIfNotExistsInitializer.cs" />
     <Compile Include="Infraestrutura.Data\Migrations\SeedDatabase.cs" />
