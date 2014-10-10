@@ -37,7 +37,7 @@ namespace Kereta.Infraestrutura.Data.Migrations
 
             var categorias= CriarCategorias().ToArray();
 
-            //var veiculos = CriarVeiculos().ToArray();
+            var veiculos = CriarVeiculos(modelo1, categorias, centrosDeCusto).ToArray();
 
             context.Update(sistemas);
 
@@ -50,7 +50,8 @@ namespace Kereta.Infraestrutura.Data.Migrations
             context.Update(colaboradores);
             
             context.Update(categorias);
-            //context.Update(veiculos);
+
+            context.Update(veiculos);
 
         }
 
@@ -61,9 +62,12 @@ namespace Kereta.Infraestrutura.Data.Migrations
             yield return new Categoria("Carga Média").ChangeIdentityAndReturn("23F98340-86A9-45AD-B06A-E1E9D73ECE57");
         }
 
-        private IEnumerable<Veiculo> CriarVeiculos()
+        private IEnumerable<Veiculo> CriarVeiculos(Modelo modelo, Categoria[] categorias,  CentroDeCusto[] centrosDeCusto)
         {
-            yield return null;
+            foreach (var categoria in categorias)
+                foreach (var centroDeCusto in centrosDeCusto)
+                    yield return VeiculoFactory.CriarImplemento(modelo, categoria, centroDeCusto);
+            
         }
 
         private IEnumerable<Colaborador> CriarColaboradores(params FuncaoDoColaborador[] funcaoColaborador)

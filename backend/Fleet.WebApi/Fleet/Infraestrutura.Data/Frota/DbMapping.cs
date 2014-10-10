@@ -74,9 +74,9 @@ namespace Kereta.Infraestrutura.Data.Frota
     {
         public DocumentacaoDbMapping()
         {
-            Property(a => a.Chassi).IsRequired();
-            Property(a => a.Placa).IsRequired(); 
-            Property(a => a.Renavam).IsRequired();
+            //Property(a => a.Chassi).IsRequired();
+            //Property(a => a.Placa).IsRequired(); 
+            //Property(a => a.Renavam).IsRequired();
         }
     }
 }

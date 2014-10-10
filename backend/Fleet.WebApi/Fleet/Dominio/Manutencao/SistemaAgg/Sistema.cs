@@ -16,9 +16,11 @@ namespace Kereta.Dominio.Manutencao.SistemaAgg
         {
             GenerateNewIdentity();
             Nome = nome;
+            SubSistemas = new ReadOnlyCollection<SubSistema>();
+
         }
         public string Nome { get; set; }
-        public virtual ICollection<SubSistema> SubSistemas { get; protected set; }
+        public virtual ReadOnlyCollection<SubSistema> SubSistemas { get; protected set; }
 
         public void AdicionarSubSistemas(SubSistema subSistema)
         {

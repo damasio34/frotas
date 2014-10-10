@@ -53,6 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Frota\VeiculoAgg\Documentacao.cs" />
+    <Compile Include="Dominio\Frota\VeiculoAgg\VeiculoFactory.cs" />
     <Compile Include="Dominio\Pessoal\ColaboradorAgg\CategoriaCNH.cs" />
     <Compile Include="Dominio\Pessoal\ColaboradorAgg\Colaborador.cs" />
     <Compile Include="Dominio\Pessoal\ColaboradorAgg\FuncaoDoColaborador.cs" />

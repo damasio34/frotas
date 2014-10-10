@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http.OData.Query;
+using Vvs.Domain.Seedwork.Aplicacao;
 
 namespace Kereta.Web.Api
 {
@@ -30,6 +31,11 @@ namespace Kereta.Web.Api
             }
             var retorno = new PageableResponse(applyed, count);
             return retorno;
+        }
+
+        public static Response<T> ToResponse<T>(this T entidade) where T : class
+        {
+            return Response.Ok(entidade);
         }
     }
 }

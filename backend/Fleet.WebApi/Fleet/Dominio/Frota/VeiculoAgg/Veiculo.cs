@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using Kereta.Dominio.Financeiro.CentroDeCustoAgg;
 using Kereta.Dominio.Frota.ModeloAgg;
 using Kereta.Dominio.Frota.MotoristaAgg;
-using Vvs.Domain.Seedwork;
 using EntityBase = Kereta.Dominio.Refectory.EntityBase;
 
 namespace Kereta.Dominio.Frota.VeiculoAgg
 {
-    public class Veiculo : EntityBase
+    public abstract class Veiculo : EntityBase
     {
         [Obsolete("EntityFramework")]
-        protected Veiculo() { }
+        protected Veiculo() { Documentacao = new Documentacao(); }
 
-        internal Veiculo(Modelo modelo, Categoria categoria, CentroDeCusto centroDeCusto)
+        protected Veiculo(Modelo modelo, Categoria categoria, CentroDeCusto centroDeCusto)
         {
             AlterarModelo(modelo);
             AlterarCategoria(categoria);
             AlterarCentroDeCusto(centroDeCusto);
+            Documentacao = new Documentacao();
             GenerateNewIdentity();
         }
         public string Nome { get; set; }
@@ -71,18 +71,4 @@ namespace Kereta.Dominio.Frota.VeiculoAgg
         public Documentacao Documentacao { get; set; }
 
     }
-
-
-    public class Documentacao : ValueObject<Documentacao>
-    {
-        public string Placa { get; set; }
-        public string Chassi { get; set; }
-        public string Renavam { get; set; }
-        public DateTime? DataDaCompra { get; set; }
-        public decimal ValorDaCompra { get; set; }
-        public DateTime? DataDeFabricacao { get; set; }
-        public int AnoDoModelo { get; set; }
-
-    }
-
 }

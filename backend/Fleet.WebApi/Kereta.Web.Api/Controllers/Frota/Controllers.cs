@@ -1,6 +1,4 @@
-﻿
-using System.Web.Http;
-using System.Web.Http.OData.Query;
+﻿using System.Web.Http;
 using Kereta.Dominio.Financeiro.CentroDeCustoAgg;
 using Kereta.Dominio.Frota.MarcaAgg;
 using Kereta.Dominio.Frota.ModeloAgg;
@@ -33,13 +31,6 @@ namespace Kereta.Web.Api.Controllers.Frota
     public class SubSistemasController : BaseController<SubSistema>
     {
         public SubSistemasController(IRepository<SubSistema> sistemaRepository) : base(sistemaRepository) { }
-    }
-
-
-    [RoutePrefix("frota/veiculos")]
-    public class VeiculoController : BaseController<Veiculo>
-    {
-        public VeiculoController(IRepository<Veiculo> sistemaRepository) : base(sistemaRepository) { }
     }
 
 
