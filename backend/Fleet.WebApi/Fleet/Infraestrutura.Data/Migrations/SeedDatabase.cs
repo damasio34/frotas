@@ -4,8 +4,11 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Kereta.Dominio.Financeiro.CentroDeCustoAgg;
 using Kereta.Dominio.Frota.MarcaAgg;
 using Kereta.Dominio.Frota.ModeloAgg;
+using Kereta.Dominio.Manutencao.SistemaAgg;
+using Kereta.Dominio.Pessoal.Colaborador;
 using Kereta.Dominio.Refectory;
 
 namespace Kereta.Infraestrutura.Data.Migrations
@@ -22,7 +25,52 @@ namespace Kereta.Infraestrutura.Data.Migrations
 
             context.Update(modelo1, modelo2);
 
+            var sistemas = CriarSistemas().ToArray();
+            var subSistema = CriarSubSistemas(sistemas).ToArray();
 
+            var centrosDeCusto = CriarCentrosDeCusto().ToArray();
+
+            var funcaoColaborador = CriarFuncoesColaborador().ToArray();
+
+            context.Update(sistemas);
+
+            context.Update(subSistema);
+
+            context.Update(centrosDeCusto);
+
+            context.Update(funcaoColaborador);
+
+        }
+
+        private IEnumerable<FuncaoDoColaborador> CriarFuncoesColaborador()
+        {
+            yield return new FuncaoDoColaborador("Motorista", 8).ChangeIdentityAndReturn("48A80DB7-55B5-4650-837A-C84369446233");
+            yield return new FuncaoDoColaborador("Borracheiro", 10).ChangeIdentityAndReturn("07044F0F-CEC1-4C8B-9E31-BBBBFCC3CDFB");
+            yield return new FuncaoDoColaborador("Gestor", 10).ChangeIdentityAndReturn("B8025B40-6A91-48B7-B512-41389B427CBB");
+            yield return new FuncaoDoColaborador("Mecânico", 10).ChangeIdentityAndReturn("F2CF901E-7838-4254-B82E-8BBDF7E977F6");
+
+        }
+
+        private IEnumerable<CentroDeCusto> CriarCentrosDeCusto()
+        {
+            yield return new CentroDeCusto("Administrativo", "Administrativo").ChangeIdentityAndReturn("DF164EB5-A9FD-4267-A401-01AC6C8CF9C0");
+            yield return new CentroDeCusto("Comercial", "Comercial").ChangeIdentityAndReturn("78BBB44D-AAAD-4077-A280-4989183C1D07");
+            yield return new CentroDeCusto("Diretoria", "Diretoria").ChangeIdentityAndReturn("1C8597B4-73C3-438C-9706-86DB2E998A13");
+            yield return new CentroDeCusto("Oficina", "Oficina").ChangeIdentityAndReturn("900BBF91-ED29-48E2-9646-894725F092B2");
+        }
+
+        private IEnumerable<SubSistema> CriarSubSistemas(Sistema[] sistemas)
+        {
+            foreach (var sistema in sistemas)
+                yield return new SubSistema(sistema, "Sub Sistema " + sistema.Id).ChangeIdentityAndReturn(sistema.Id);
+        }
+
+        private IEnumerable<Sistema> CriarSistemas()
+        {
+            yield return new Sistema("Combustíveis").ChangeIdentityAndReturn(Guid.Parse("CA56CFA6-570B-4334-BAD7-5087E6E9A6C6"));
+            yield return new Sistema("Elétrico").ChangeIdentityAndReturn(Guid.Parse("8D0FDAFF-EA22-47A0-9748-CA27FC37D12D"));
+            yield return new Sistema("Funilaria").ChangeIdentityAndReturn(Guid.Parse("C388C5B0-5674-4BBD-9933-E6E42EACE3FD")); ;
+            yield return new Sistema("Mecânico").ChangeIdentityAndReturn(Guid.Parse("3A6A30DC-9057-445C-8735-070C26663D9B")); ;
         }
 
         private IEnumerable<Marca> CriarMarcas()

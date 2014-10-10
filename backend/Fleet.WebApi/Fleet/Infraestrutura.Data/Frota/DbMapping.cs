@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Kereta.Dominio.Frota.MarcaAgg;
 using Kereta.Dominio.Frota.ModeloAgg;
+using Kereta.Dominio.Manutencao.SistemaAgg;
 
 namespace Kereta.Infraestrutura.Data.Frota
 {
@@ -16,6 +17,25 @@ namespace Kereta.Infraestrutura.Data.Frota
             HasKey(a => a.Id);
 
             
+        }
+    }
+
+    public class SistemaDbMapping : EntityTypeConfiguration<Sistema>
+    {
+        public SistemaDbMapping()
+        {
+            HasKey(a => a.Id);
+            HasMany(a=>a.SubSistemas)
+                .WithRequired(a=>a.Sistema)
+                .HasForeignKey(a=>a.IdSistema);
+        }
+    }
+
+    public class SubSistemaDbMapping : EntityTypeConfiguration<SubSistema>
+    {
+        public SubSistemaDbMapping()
+        {
+            HasKey(a => a.Id);
         }
     }
 
@@ -31,3 +51,5 @@ namespace Kereta.Infraestrutura.Data.Frota
         }
     }
 }
+
+

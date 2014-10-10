@@ -1,6 +1,7 @@
 ﻿using System.Data.Common;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using Kereta.Dominio.Manutencao.SistemaAgg;
 using Kereta.Infraestrutura.Data.Frota;
 using Kereta.Infraestrutura.Data.Migrations;
 using Vvs.Infraestrutura.Data.EF;
@@ -32,8 +33,17 @@ namespace Kereta.Infraestrutura.Data
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
+            //Frota
             modelBuilder.Configurations.Add(new MarcaDbMapping());
             modelBuilder.Configurations.Add(new ModeloDbMapping());
+            modelBuilder.Configurations.Add(new SubSistemaDbMapping());
+            modelBuilder.Configurations.Add(new SistemaDbMapping());
+
+            //Financeiro
+            modelBuilder.Configurations.Add(new CentroDeCustoDbMapping());
+
+            //Pessoal
+            modelBuilder.Configurations.Add(new FuncaoDoColaboradorDbMapping());
 
         }
     }

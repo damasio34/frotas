@@ -32,6 +32,12 @@ namespace Kereta.Dominio.Refectory
             entity.ChangeIdentity(id);
             return entity;
         }
+
+        public static T ChangeIdentityAndReturn<T>(this T entity, string id)
+            where T : EntityBase
+        {
+            return entity.ChangeIdentityAndReturn(Guid.Parse(id));
+        }
     }
     public class EntityBase
     {

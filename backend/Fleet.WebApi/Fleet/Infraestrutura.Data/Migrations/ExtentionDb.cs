@@ -13,5 +13,6 @@ namespace Kereta.Infraestrutura.Data.Migrations
             dbContext.Set<TEntity>().AddOrUpdate(entities.ToArray());
             return dbContext;
         }
+
     }
 }

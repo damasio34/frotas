@@ -136,8 +136,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Controllers\Financeiro\Controllers.cs" />
     <Compile Include="Controllers\Frota\Controllers.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\Pessoal\Controllers.cs" />
     <Compile Include="PageableResponse.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="WebApiConfig.cs" />

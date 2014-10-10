@@ -53,6 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Pessoal\ColaboradorAgg\CategoriaCNH.cs" />
+    <Compile Include="Dominio\Pessoal\ColaboradorAgg\Colaborador.cs" />
+    <Compile Include="Dominio\Pessoal\ColaboradorAgg\FuncaoDoColaborador.cs" />
+    <Compile Include="Dominio\Pessoal\ColaboradorAgg\OrgaoEmissor.cs" />
     <Compile Include="Dominio\ReadOnlyCollection.cs" />
     <Compile Include="Dominio\Frota\VeiculoAgg\Cavalo.cs" />
     <Compile Include="Dominio\Frota\VeiculoAgg\CombustivelDoVeiculo.cs" />
@@ -71,10 +75,12 @@
     <Compile Include="Dominio\Manutencao\PlanoDeManutencaoAgg\ServicoDoPlanoDeManutencao.cs" />
     <Compile Include="Dominio\Manutencao\ServicoAgg\ServicoFactory.cs" />
     <Compile Include="Dominio\Manutencao\ServicoAgg\TipoDeFrequencia.cs" />
-    <Compile Include="Dominio\Manutencao\SistemaAgg\SubSistema.cs" />
+    <Compile Include="Dominio\Manutencao\SubSistemaAgg\SubSistema.cs" />
     <Compile Include="Dominio\Manutencao\SistemaAgg\Sistema.cs" />
     <Compile Include="Dominio\Refectory\EntidadeIdNome.cs" />
     <Compile Include="Dominio\Refectory\EntityBase.cs" />
+    <Compile Include="Infraestrutura.Data\Financeiro\DbMapping.cs" />
+    <Compile Include="Infraestrutura.Data\Fiscal\DbMapping.cs" />
     <Compile Include="Infraestrutura.Data\KeretaRepository.cs" />
     <Compile Include="Infraestrutura.Data\Frota\DbMapping.cs" />
     <Compile Include="Infraestrutura.Data\KeretaUnitOfWork.cs" />
@@ -82,6 +88,7 @@
     <Compile Include="Infraestrutura.Data\Migrations\SeedDatabase.cs" />
     <Compile Include="Infraestrutura.Data\Migrations\Configuration.cs" />
     <Compile Include="Infraestrutura.Data\Migrations\ExtentionDb.cs" />
+    <Compile Include="Infraestrutura.Data\Pessoal\DbMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
