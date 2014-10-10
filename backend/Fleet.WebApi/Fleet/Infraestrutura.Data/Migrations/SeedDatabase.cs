@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Kereta.Dominio.Financeiro.CentroDeCustoAgg;
 using Kereta.Dominio.Frota.MarcaAgg;
 using Kereta.Dominio.Frota.ModeloAgg;
+using Kereta.Dominio.Frota.VeiculoAgg;
 using Kereta.Dominio.Manutencao.SistemaAgg;
 using Kereta.Dominio.Pessoal.Colaborador;
 using Kereta.Dominio.Refectory;
@@ -34,6 +35,10 @@ namespace Kereta.Infraestrutura.Data.Migrations
 
             var colaboradores = CriarColaboradores(funcaoColaborador).ToArray();
 
+            var categorias= CriarCategorias().ToArray();
+
+            //var veiculos = CriarVeiculos().ToArray();
+
             context.Update(sistemas);
 
             context.Update(subSistema);
@@ -43,8 +48,22 @@ namespace Kereta.Infraestrutura.Data.Migrations
             context.Update(funcaoColaborador);
 
             context.Update(colaboradores);
+            
+            context.Update(categorias);
+            //context.Update(veiculos);
 
+        }
 
+        private IEnumerable<Categoria> CriarCategorias()
+        {
+            yield return new Categoria("Passeio").ChangeIdentityAndReturn("046C4886-2350-43E6-ABB8-A2F75C002BA1");
+            yield return new Categoria("Carga Pesada").ChangeIdentityAndReturn("87842B17-EFF3-4388-AE15-B85E08E2B51D");
+            yield return new Categoria("Carga Média").ChangeIdentityAndReturn("23F98340-86A9-45AD-B06A-E1E9D73ECE57");
+        }
+
+        private IEnumerable<Veiculo> CriarVeiculos()
+        {
+            yield return null;
         }
 
         private IEnumerable<Colaborador> CriarColaboradores(params FuncaoDoColaborador[] funcaoColaborador)

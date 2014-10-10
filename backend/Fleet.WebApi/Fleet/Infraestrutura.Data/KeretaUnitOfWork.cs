@@ -38,6 +38,9 @@ namespace Kereta.Infraestrutura.Data
             modelBuilder.Configurations.Add(new ModeloDbMapping());
             modelBuilder.Configurations.Add(new SubSistemaDbMapping());
             modelBuilder.Configurations.Add(new SistemaDbMapping());
+            modelBuilder.Configurations.Add(new VeiculoDbMapping());
+            modelBuilder.Configurations.Add(new CategoriaDbMapping());
+            
 
             //Financeiro
             modelBuilder.Configurations.Add(new CentroDeCustoDbMapping());

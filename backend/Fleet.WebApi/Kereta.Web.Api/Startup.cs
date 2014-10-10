@@ -8,6 +8,7 @@ using System.Web.Http;
 using Kereta.Dominio.Financeiro.CentroDeCustoAgg;
 using Kereta.Dominio.Frota.MarcaAgg;
 using Kereta.Dominio.Frota.ModeloAgg;
+using Kereta.Dominio.Frota.VeiculoAgg;
 using Kereta.Dominio.Manutencao.SistemaAgg;
 using Kereta.Dominio.Pessoal.Colaborador;
 using Kereta.Infraestrutura.Data;
@@ -67,6 +68,9 @@ namespace Kereta.Web.Api
             kernel.Bind<IRepository<CentroDeCusto>>().To<Repository<CentroDeCusto>>();
             kernel.Bind<IRepository<FuncaoDoColaborador>>().To<Repository<FuncaoDoColaborador>>();
             kernel.Bind<IRepository<Colaborador>>().To<Repository<Colaborador>>();
+            kernel.Bind<IRepository<Veiculo>>().To<Repository<Veiculo>>();
+            kernel.Bind<IRepository<Categoria>>().To<Repository<Categoria>>();
+
             
             return kernel;
         }

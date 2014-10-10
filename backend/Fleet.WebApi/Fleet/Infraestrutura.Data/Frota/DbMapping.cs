@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Kereta.Dominio.Frota.MarcaAgg;
 using Kereta.Dominio.Frota.ModeloAgg;
+using Kereta.Dominio.Frota.VeiculoAgg;
 using Kereta.Dominio.Manutencao.SistemaAgg;
 
 namespace Kereta.Infraestrutura.Data.Frota
@@ -48,6 +49,34 @@ namespace Kereta.Infraestrutura.Data.Frota
             HasRequired(a => a.Marca)
                 .WithMany(a => a.Modelos)
                 .HasForeignKey(a=>a.IdMarca);
+        }
+    }
+
+
+    public class VeiculoDbMapping : EntityTypeConfiguration<Veiculo>
+    {
+        public VeiculoDbMapping()
+        {
+            HasKey(a => a.Id);
+        }
+    }
+
+    public class CategoriaDbMapping : EntityTypeConfiguration<Categoria>
+    {
+        public CategoriaDbMapping()
+        {
+            HasKey(a => a.Id);
+            Property(a => a.Nome).IsRequired();
+        }
+    }
+
+    public class DocumentacaoDbMapping : ComplexTypeConfiguration<Documentacao>
+    {
+        public DocumentacaoDbMapping()
+        {
+            Property(a => a.Chassi).IsRequired();
+            Property(a => a.Placa).IsRequired(); 
+            Property(a => a.Renavam).IsRequired();
         }
     }
 }

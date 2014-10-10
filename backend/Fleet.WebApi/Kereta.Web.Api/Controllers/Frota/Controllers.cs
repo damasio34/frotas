@@ -4,6 +4,7 @@ using System.Web.Http.OData.Query;
 using Kereta.Dominio.Financeiro.CentroDeCustoAgg;
 using Kereta.Dominio.Frota.MarcaAgg;
 using Kereta.Dominio.Frota.ModeloAgg;
+using Kereta.Dominio.Frota.VeiculoAgg;
 using Kereta.Dominio.Manutencao.SistemaAgg;
 using Vvs.Domain.Seedwork.Repositorios;
 
@@ -32,6 +33,20 @@ namespace Kereta.Web.Api.Controllers.Frota
     public class SubSistemasController : BaseController<SubSistema>
     {
         public SubSistemasController(IRepository<SubSistema> sistemaRepository) : base(sistemaRepository) { }
+    }
+
+
+    [RoutePrefix("frota/veiculos")]
+    public class VeiculoController : BaseController<Veiculo>
+    {
+        public VeiculoController(IRepository<Veiculo> sistemaRepository) : base(sistemaRepository) { }
+    }
+
+
+    [RoutePrefix("frota/categorias")]
+    public class CategoriasController : BaseController<Categoria>
+    {
+        public CategoriasController(IRepository<Categoria> sistemaRepository) : base(sistemaRepository) { }
     }
 
 }
