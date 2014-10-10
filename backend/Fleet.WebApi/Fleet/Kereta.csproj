@@ -53,6 +53,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Frota\Gravidade.cs" />
+    <Compile Include="Dominio\Frota\GravidadeQualificacao.cs" />
+    <Compile Include="Dominio\Frota\Infracao.cs" />
+    <Compile Include="Dominio\Frota\Infrator.cs" />
+    <Compile Include="Dominio\Frota\LocalInfracao.cs" />
+    <Compile Include="Dominio\Frota\Notificacao.cs" />
+    <Compile Include="Dominio\Frota\Penalidade.cs" />
+    <Compile Include="Dominio\Frota\Qualificacao.cs" />
+    <Compile Include="Dominio\Frota\SituacaoDaInfracao.cs" />
+    <Compile Include="Dominio\Frota\TipoPenalidade.cs" />
     <Compile Include="Dominio\Frota\VeiculoAgg\Documentacao.cs" />
     <Compile Include="Dominio\Frota\VeiculoAgg\VeiculoFactory.cs" />
     <Compile Include="Dominio\Pessoal\ColaboradorAgg\CategoriaCNH.cs" />
