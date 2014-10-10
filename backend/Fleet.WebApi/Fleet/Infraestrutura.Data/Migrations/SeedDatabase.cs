@@ -32,6 +32,8 @@ namespace Kereta.Infraestrutura.Data.Migrations
 
             var funcaoColaborador = CriarFuncoesColaborador().ToArray();
 
+            var colaboradores = CriarColaboradores(funcaoColaborador).ToArray();
+
             context.Update(sistemas);
 
             context.Update(subSistema);
@@ -40,6 +42,17 @@ namespace Kereta.Infraestrutura.Data.Migrations
 
             context.Update(funcaoColaborador);
 
+            context.Update(colaboradores);
+
+
+        }
+
+        private IEnumerable<Colaborador> CriarColaboradores(params FuncaoDoColaborador[] funcaoColaborador)
+        {
+            foreach (var item in funcaoColaborador)
+                yield return 
+                    new Colaborador(item, "Colaborador " + DateTime.Now.Millisecond)
+                    .ChangeIdentityAndReturn(item.Id);
         }
 
         private IEnumerable<FuncaoDoColaborador> CriarFuncoesColaborador()

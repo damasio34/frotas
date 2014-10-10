@@ -33,9 +33,9 @@ namespace Kereta.Dominio.Pessoal.Colaborador
         
         public string Matricula { get; set; }
 
-        public string NumeroCNH { get; set; }
+        public string NumeroCnh { get; set; }
 
-        public DateTime? DataDeVencimentoCNH { get; set; }
+        public DateTime? DataDeVencimentoCnh { get; set; }
         
         public CategoriaCNH CategoriaCnh { get; set; }
 

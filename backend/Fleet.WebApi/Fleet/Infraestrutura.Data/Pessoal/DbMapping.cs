@@ -24,10 +24,8 @@ namespace Kereta.Infraestrutura.Data.Frota
         public ColaboradorDbMapping()
         {
             HasKey(a => a.Id);
-
+            Property(a => a.Nome).IsRequired();
             HasRequired(a => a.Funcao);
-
-
         }
     }
 

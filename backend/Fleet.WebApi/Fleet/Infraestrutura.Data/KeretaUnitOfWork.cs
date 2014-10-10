@@ -44,6 +44,8 @@ namespace Kereta.Infraestrutura.Data
 
             //Pessoal
             modelBuilder.Configurations.Add(new FuncaoDoColaboradorDbMapping());
+            modelBuilder.Configurations.Add(new ColaboradorDbMapping());
+
 
         }
     }
