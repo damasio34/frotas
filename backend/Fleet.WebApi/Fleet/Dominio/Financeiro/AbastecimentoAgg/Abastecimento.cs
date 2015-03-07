@@ -22,6 +22,7 @@ namespace Kereta.Dominio.Financeiro.AbastecimentoAgg
         public virtual CombustivelDoVeiculo CombustivelDoVeiculo { get; set; }
         public decimal Quantidade { get; set; }
         public decimal Valor { get; set; }
+        public decimal Hodometro { get; set; }
 
 
     }

@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dominio\Financeiro\AbastecimentoAgg\Abastecimento.cs" />
+    <Compile Include="Dominio\Financeiro\CustoAgg\CustoDoProcesso - Copy.cs" />
     <Compile Include="Dominio\Financeiro\ViagemAgg\Viagem.cs" />
     <Compile Include="Dominio\Financeiro\CustoAgg\CustoDaInfracao.cs" />
     <Compile Include="Dominio\Financeiro\CustoAgg\Custo.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Dominio\Frota\TipoPenalidade.cs" />
     <Compile Include="Dominio\Frota\VeiculoAgg\Documentacao.cs" />
     <Compile Include="Dominio\Frota\VeiculoAgg\VeiculoFactory.cs" />
+    <Compile Include="Dominio\Manutencao\OrdemDeServicoAgg\Class1.cs" />
     <Compile Include="Dominio\Pessoal\ColaboradorAgg\CategoriaCNH.cs" />
     <Compile Include="Dominio\Pessoal\ColaboradorAgg\Colaborador.cs" />
     <Compile Include="Dominio\Pessoal\ColaboradorAgg\FuncaoDoColaborador.cs" />
