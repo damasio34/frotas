@@ -5,6 +5,7 @@ using Kereta.Dominio.Manutencao.SistemaAgg;
 using Kereta.Infraestrutura.Data.Frota;
 using Kereta.Infraestrutura.Data.Migrations;
 using Vvs.Infraestrutura.Data.EF;
+using Kereta.Infraestrutura.Data.Documentacao;
 
 namespace Kereta.Infraestrutura.Data
 {
@@ -35,6 +36,7 @@ namespace Kereta.Infraestrutura.Data
 
             //Frota
             modelBuilder.Configurations.Add(new MarcaDbMapping());
+            modelBuilder.Configurations.Add(new GravidadeDeQualificacaoDbMapping());
             modelBuilder.Configurations.Add(new ModeloDbMapping());
             modelBuilder.Configurations.Add(new SubSistemaDbMapping());
             modelBuilder.Configurations.Add(new SistemaDbMapping());

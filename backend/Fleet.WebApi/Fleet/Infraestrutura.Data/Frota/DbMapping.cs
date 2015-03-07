@@ -70,9 +70,9 @@ namespace Kereta.Infraestrutura.Data.Frota
         }
     }
 
-    public class DocumentacaoDbMapping : ComplexTypeConfiguration<Documentacao>
+    public class DocumentoDoCarroDbMapping : ComplexTypeConfiguration<DocumentoDoCarro>
     {
-        public DocumentacaoDbMapping()
+        public DocumentoDoCarroDbMapping()
         {
             //Property(a => a.Chassi).IsRequired();
             //Property(a => a.Placa).IsRequired(); 

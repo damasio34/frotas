@@ -3,7 +3,7 @@ using Vvs.Domain.Seedwork;
 
 namespace Kereta.Dominio.Frota.VeiculoAgg
 {
-    public class Documentacao : ValueObject<Documentacao>
+    public class DocumentoDoCarro : ValueObject<DocumentoDoCarro>
     {
         public string Placa { get; set; }
         public string Chassi { get; set; }

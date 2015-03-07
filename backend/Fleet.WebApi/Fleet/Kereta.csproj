@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Documentacao\GravidadeDeQualificacaoAgg\GravidadeDeQualificacao.cs" />
     <Compile Include="Dominio\Frota\Gravidade.cs" />
     <Compile Include="Dominio\Frota\GravidadeQualificacao.cs" />
     <Compile Include="Dominio\Frota\Infracao.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Dominio\Manutencao\SistemaAgg\Sistema.cs" />
     <Compile Include="Dominio\Refectory\EntidadeIdNome.cs" />
     <Compile Include="Dominio\Refectory\EntityBase.cs" />
+    <Compile Include="Infraestrutura.Data\Documentacao\DbMapping.cs" />
     <Compile Include="Infraestrutura.Data\Financeiro\DbMapping.cs" />
     <Compile Include="Infraestrutura.Data\Fiscal\DbMapping.cs" />
     <Compile Include="Infraestrutura.Data\KeretaRepository.cs" />
@@ -105,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Aplicacao\" />
+    <Folder Include="Dominio\Juridico\" />
     <Folder Include="Infraestrutura\" />
   </ItemGroup>
   <ItemGroup>

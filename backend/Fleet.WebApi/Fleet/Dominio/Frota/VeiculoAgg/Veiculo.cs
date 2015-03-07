@@ -10,14 +10,14 @@ namespace Kereta.Dominio.Frota.VeiculoAgg
     public abstract class Veiculo : EntityBase
     {
         [Obsolete("EntityFramework")]
-        protected Veiculo() { Documentacao = new Documentacao(); }
+        protected Veiculo() { Documentacao = new DocumentoDoCarro(); }
 
         protected Veiculo(Modelo modelo, Categoria categoria, CentroDeCusto centroDeCusto)
         {
             AlterarModelo(modelo);
             AlterarCategoria(categoria);
             AlterarCentroDeCusto(centroDeCusto);
-            Documentacao = new Documentacao();
+            Documentacao = new DocumentoDoCarro();
             GenerateNewIdentity();
         }
         public string Nome { get; set; }
@@ -68,7 +68,7 @@ namespace Kereta.Dominio.Frota.VeiculoAgg
 
         public int Lotacao { get; set; }
 
-        public Documentacao Documentacao { get; set; }
+        public DocumentoDoCarro Documentacao { get; set; }
 
     }
 }

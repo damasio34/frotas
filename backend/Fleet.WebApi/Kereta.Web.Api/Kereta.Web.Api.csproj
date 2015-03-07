@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Controllers\Documentacao\Controllers.cs" />
     <Compile Include="Controllers\Financeiro\Controllers.cs" />
     <Compile Include="Controllers\Frota\Controllers.cs" />
     <Compile Include="Controllers\BaseController.cs" />
@@ -165,6 +166,7 @@
       <Name>Seedwork</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
