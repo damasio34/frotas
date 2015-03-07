@@ -13,15 +13,14 @@ using Kereta.Dominio.Manutencao.SistemaAgg;
 using Kereta.Dominio.Pessoal.Colaborador;
 using Kereta.Infraestrutura.Data;
 using Microsoft.Owin.Cors;
-using Ninject;
-using Ninject.Web.Common.OwinHost;
-using Ninject.Web.WebApi.OwinHost;
 using Owin;
 using Vvs.Domain.Seedwork;
 using Vvs.Domain.Seedwork.Repositorios;
 using Vvs.Domain.Seedwork.UnitOfWork;
 using Kereta.Dominio.Frota;
 using Kereta.Dominio.Frota.ProcessoAgg;
+using SimpleInjector;
+using SimpleInjector.Integration.WebApi.Extensions;
 
 namespace Kereta.Web.Api
 {
@@ -35,48 +34,46 @@ namespace Kereta.Web.Api
             app.UseCors(CorsOptions.AllowAll);
 
             // Web API
-            //var httpConfig = GlobalConfiguration.Configuration;
             var httpConfig = new HttpConfiguration();
-
+                        
             WebApiConfig.Register(httpConfig);
-            httpConfig.EnsureInitialized();
+            
+            var container = CreateContainer(app);
 
-            //Config Web Api Com Ninject
-            app.UseNinjectMiddleware(CreateKernel).UseNinjectWebApi(httpConfig);
+            app.UseSimpleInjector(container, httpConfig);
+
+            httpConfig.EnsureInitialized();
+            app.UseWebApi( httpConfig);
 
 #if DEBUG
-
             app.UseErrorPage();
             app.UseWelcomePage("/");
-
 #endif
 
         }
 
-        private static IKernel CreateKernel()
+        private Container CreateContainer(IAppBuilder app)
         {
-            var kernel = new StandardKernel();
+            var container = new Container();
 
-            //var typeEntity = typeof(EntityBase);
-            //var types = Assembly.Load("Kereta").GetTypes().ToArray();
-            //var types2 = types.Where(a => a.BaseType != null && a.BaseType.Name == "EntityBase");
+            container.RegisterSingle<IAppBuilder>(app);                      
 
-            kernel.Bind<IUnitOfWork>().To<KeretaUnitOfWork>();
+            container.Register<IUnitOfWork, KeretaUnitOfWork>();
+            container.Register<IRepository<Modelo>, Repository<Modelo>>();
+            container.Register<IRepository<Processo>, Repository<Processo>>();
+            container.Register<IRepository<Gravidade>, Repository<Gravidade>>();
+            container.Register<IRepository<SubSistema>, Repository<SubSistema>>();
+            container.Register<IRepository<Sistema>, Repository<Sistema>>();
+            container.Register<IRepository<Marca>, Repository<Marca>>();
+            container.Register<IRepository<CentroDeCusto>, Repository<CentroDeCusto>>();
+            container.Register<IRepository<FuncaoDoColaborador>, Repository<FuncaoDoColaborador>>();
+            container.Register<IRepository<Colaborador>, Repository<Colaborador>>();
+            container.Register<IRepository<Veiculo>, Repository<Veiculo>>();
+            container.Register<IRepository<Categoria>, Repository<Categoria>>();
 
-            kernel.Bind<IRepository<Modelo>>().To<Repository<Modelo>>();
-            kernel.Bind<IRepository<Processo>>().To<Repository<Processo>>();
-            kernel.Bind<IRepository<Gravidade>>().To<Repository<Gravidade>>();
-            kernel.Bind<IRepository<SubSistema>>().To<Repository<SubSistema>>();
-            kernel.Bind<IRepository<Sistema>>().To<Repository<Sistema>>();
-            kernel.Bind<IRepository<Marca>>().To<Repository<Marca>>();
-            kernel.Bind<IRepository<CentroDeCusto>>().To<Repository<CentroDeCusto>>();
-            kernel.Bind<IRepository<FuncaoDoColaborador>>().To<Repository<FuncaoDoColaborador>>();
-            kernel.Bind<IRepository<Colaborador>>().To<Repository<Colaborador>>();
-            kernel.Bind<IRepository<Veiculo>>().To<Repository<Veiculo>>();
-            kernel.Bind<IRepository<Categoria>>().To<Repository<Categoria>>();
+            container.Verify();
 
-            
-            return kernel;
+            return container;
         }
     }
 }

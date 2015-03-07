@@ -20,7 +20,7 @@ namespace Kereta.Infraestrutura.Data
             
         }
 
-        public KeretaUnitOfWork(DbConnection connection)
+        internal KeretaUnitOfWork(DbConnection connection)
             : base(connection, true)
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<KeretaUnitOfWork, Configuration>());
