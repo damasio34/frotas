@@ -1,5 +1,6 @@
-﻿using System;
-using Vvs.Domain.Seedwork;
+﻿using Kereta.Dominio.Refectory;
+using System;
+
 
 namespace Kereta.Dominio.Frota
 {
@@ -7,6 +8,15 @@ namespace Kereta.Dominio.Frota
     {
         [Obsolete("EntityFramework")]
         protected Gravidade() { }
+
+        internal Gravidade(string nome, decimal valor, GravidadeQualificacao gravidade)
+        {
+            GenerateNewIdentity();
+            Nome = nome;
+            Valor = valor;
+            GravidadeQualificacao = gravidade;
+
+        }
 
         public string Nome { get; set; }
 

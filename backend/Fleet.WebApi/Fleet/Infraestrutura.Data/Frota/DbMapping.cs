@@ -8,6 +8,7 @@ using Kereta.Dominio.Frota.MarcaAgg;
 using Kereta.Dominio.Frota.ModeloAgg;
 using Kereta.Dominio.Frota.VeiculoAgg;
 using Kereta.Dominio.Manutencao.SistemaAgg;
+using Kereta.Dominio.Frota.ProcessoAgg;
 
 namespace Kereta.Infraestrutura.Data.Frota
 {
@@ -67,6 +68,15 @@ namespace Kereta.Infraestrutura.Data.Frota
         {
             HasKey(a => a.Id);
             Property(a => a.Nome).IsRequired();
+        }
+    }
+
+    public class ProcessoDbMapping : EntityTypeConfiguration<Processo>
+    {
+        public ProcessoDbMapping()
+        {
+            HasKey(a => a.Id);
+            Property(a => a.NumeroDoProcesso).IsRequired();
         }
     }
 

@@ -7,15 +7,19 @@ using Kereta.Dominio.Frota.ModeloAgg;
 using Kereta.Dominio.Manutencao.SistemaAgg;
 using Kereta.Dominio.Pessoal.Colaborador;
 using Vvs.Domain.Seedwork.Repositorios;
-using Kereta.Dominio.Documentacao;
+using Kereta.Dominio.Frota;
 
 namespace Kereta.Web.Api.Controllers.Fiscal
 {
-   
-    [RoutePrefix("documentacao/gravidadeDeQualificacao")]
-    public class GravidadeDeQualificacaoController : BaseController<GravidadeDeQualificacao>
+
+    [RoutePrefix("documentacao/gravidades")]
+    public class GravidadeController : BaseController<Gravidade>
     {
-        public GravidadeDeQualificacaoController(IRepository<GravidadeDeQualificacao> sistemaRepository) : base(sistemaRepository) { }
+        public GravidadeController(IRepository<Gravidade> sistemaRepository)
+            : base(sistemaRepository)
+        {
+
+        }
     }
 
 }

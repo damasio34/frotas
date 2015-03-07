@@ -36,7 +36,8 @@ namespace Kereta.Infraestrutura.Data
 
             //Frota
             modelBuilder.Configurations.Add(new MarcaDbMapping());
-            modelBuilder.Configurations.Add(new GravidadeDeQualificacaoDbMapping());
+            modelBuilder.Configurations.Add(new GravidadeDbMapping());
+            modelBuilder.Configurations.Add(new ProcessoDbMapping());
             modelBuilder.Configurations.Add(new ModeloDbMapping());
             modelBuilder.Configurations.Add(new SubSistemaDbMapping());
             modelBuilder.Configurations.Add(new SistemaDbMapping());

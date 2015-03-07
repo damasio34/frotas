@@ -8,13 +8,14 @@ using Kereta.Dominio.Financeiro.CentroDeCustoAgg;
 using Kereta.Dominio.Frota.MarcaAgg;
 using Kereta.Dominio.Frota.ModeloAgg;
 using Kereta.Dominio.Manutencao.SistemaAgg;
-using Kereta.Dominio.Documentacao;
+using Kereta.Dominio.Frota;
+
 
 namespace Kereta.Infraestrutura.Data.Documentacao
 {
-    public class GravidadeDeQualificacaoDbMapping : EntityTypeConfiguration<GravidadeDeQualificacao>
+    public class GravidadeDbMapping : EntityTypeConfiguration<Gravidade>
     {
-        public GravidadeDeQualificacaoDbMapping()
+        public GravidadeDbMapping()
         {
             HasKey(a => a.Id);
 

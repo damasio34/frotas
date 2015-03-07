@@ -20,7 +20,8 @@ using Owin;
 using Vvs.Domain.Seedwork;
 using Vvs.Domain.Seedwork.Repositorios;
 using Vvs.Domain.Seedwork.UnitOfWork;
-using Kereta.Dominio.Documentacao;
+using Kereta.Dominio.Frota;
+using Kereta.Dominio.Frota.ProcessoAgg;
 
 namespace Kereta.Web.Api
 {
@@ -63,7 +64,8 @@ namespace Kereta.Web.Api
             kernel.Bind<IUnitOfWork>().To<KeretaUnitOfWork>();
 
             kernel.Bind<IRepository<Modelo>>().To<Repository<Modelo>>();
-            kernel.Bind<IRepository<GravidadeDeQualificacao>>().To<Repository<GravidadeDeQualificacao>>();
+            kernel.Bind<IRepository<Processo>>().To<Repository<Processo>>();
+            kernel.Bind<IRepository<Gravidade>>().To<Repository<Gravidade>>();
             kernel.Bind<IRepository<SubSistema>>().To<Repository<SubSistema>>();
             kernel.Bind<IRepository<Sistema>>().To<Repository<Sistema>>();
             kernel.Bind<IRepository<Marca>>().To<Repository<Marca>>();

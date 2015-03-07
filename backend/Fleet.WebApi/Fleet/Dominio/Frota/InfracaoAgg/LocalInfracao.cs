@@ -2,7 +2,7 @@
 
 namespace Kereta.Dominio.Frota
 {
-    public class LocalInfracao : ValueObject<LocalInfracao>
+    public class Localizacao : ValueObject<Localizacao>
     {
         public string Endereco { get; set; }
         public string Cidade { get; set; }

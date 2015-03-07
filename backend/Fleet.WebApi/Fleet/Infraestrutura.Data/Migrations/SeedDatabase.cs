@@ -11,7 +11,9 @@ using Kereta.Dominio.Frota.VeiculoAgg;
 using Kereta.Dominio.Manutencao.SistemaAgg;
 using Kereta.Dominio.Pessoal.Colaborador;
 using Kereta.Dominio.Refectory;
-using Kereta.Dominio.Documentacao;
+using Kereta.Dominio.Frota;
+using Kereta.Dominio.Frota.ProcessoAgg;
+
 
 namespace Kereta.Infraestrutura.Data.Migrations
 {
@@ -40,7 +42,8 @@ namespace Kereta.Infraestrutura.Data.Migrations
 
             var veiculos = CriarVeiculos(modelo1, categorias, centrosDeCusto).ToArray();
 
-            var gravidadeQualificacao = CriarGravidadeDeQualificacao().ToArray();
+            var gravidadeQualificacao = CriarGravidade().ToArray();
+            var processos = CriarProcesso().ToArray();
 
             context.Update(sistemas);
 
@@ -58,15 +61,25 @@ namespace Kereta.Infraestrutura.Data.Migrations
 
             context.Update(gravidadeQualificacao);
 
+            context.Update(processos);
+
 
         }
 
-        private IEnumerable<GravidadeDeQualificacao> CriarGravidadeDeQualificacao()
+
+        private IEnumerable<Processo> CriarProcesso()
         {
-            yield return new GravidadeDeQualificacao("Grave",  127.69m, 5).ChangeIdentityAndReturn("76622B17-EFF3-4388-AE15-B85E08E2B51D");
-            yield return new GravidadeDeQualificacao("Gravíssima",  191.54m, 7).ChangeIdentityAndReturn("75222B17-EFF3-4388-AE15-B85E08E2B51D");
-            yield return new GravidadeDeQualificacao("Leve", 53.20m, 3).ChangeIdentityAndReturn("74412B17-EFF3-4388-AE15-B85E08E2B51D");
-            yield return new GravidadeDeQualificacao("Média", 85.12m, 4).ChangeIdentityAndReturn("66922B17-EFF3-4388-AE15-B85E08E2B51D");
+            yield return new Processo("123456879", SituacaoDoProcesso.Aberto, DateTime.Now).ChangeIdentityAndReturn("56622123-EFF3-4388-AE15-B85E08E2B51D");
+            yield return new Processo("987654321", SituacaoDoProcesso.Cancelado, DateTime.Now).ChangeIdentityAndReturn("42222123-EFF3-4388-AE15-B85E08E2B51D");
+            yield return new Processo("654987123", SituacaoDoProcesso.Concluido, DateTime.Now).ChangeIdentityAndReturn("65222123-EFF3-4388-AE15-B85E08E2B51D");
+        }
+
+        private IEnumerable<Gravidade> CriarGravidade()
+        {
+            yield return new Gravidade("Grave", 127.69m, GravidadeQualificacao.Grave).ChangeIdentityAndReturn("76622B17-EFF3-4388-AE15-B85E08E2B51D");
+            yield return new Gravidade("Gravíssima", 191.54m, GravidadeQualificacao.Gravissima).ChangeIdentityAndReturn("75222B17-EFF3-4388-AE15-B85E08E2B51D");
+            yield return new Gravidade("Leve", 53.20m, GravidadeQualificacao.Leve).ChangeIdentityAndReturn("74412B17-EFF3-4388-AE15-B85E08E2B51D");
+            yield return new Gravidade("Média", 85.12m, GravidadeQualificacao.Media).ChangeIdentityAndReturn("66922B17-EFF3-4388-AE15-B85E08E2B51D");
         }
 
 

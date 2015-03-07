@@ -53,15 +53,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dominio\Documentacao\GravidadeDeQualificacaoAgg\GravidadeDeQualificacao.cs" />
-    <Compile Include="Dominio\Frota\Gravidade.cs" />
-    <Compile Include="Dominio\Frota\GravidadeQualificacao.cs" />
-    <Compile Include="Dominio\Frota\Infracao.cs" />
-    <Compile Include="Dominio\Frota\Infrator.cs" />
-    <Compile Include="Dominio\Frota\LocalInfracao.cs" />
+    <Compile Include="Dominio\Financeiro\CustoAgg\CustoDaInfracao.cs" />
+    <Compile Include="Dominio\Financeiro\CustoAgg\Custo.cs" />
+    <Compile Include="Dominio\Financeiro\CustoAgg\CustoDoProcesso.cs" />
+    <Compile Include="Dominio\Frota\GravidadeAgg\Gravidade.cs" />
+    <Compile Include="Dominio\Frota\InfracaoAgg\GravidadeQualificacao.cs" />
+    <Compile Include="Dominio\Frota\InfracaoAgg\Infracao.cs" />
+    <Compile Include="Dominio\Frota\InfracaoAgg\Infrator.cs" />
+    <Compile Include="Dominio\Frota\InfracaoAgg\LocalInfracao.cs" />
     <Compile Include="Dominio\Frota\Notificacao.cs" />
     <Compile Include="Dominio\Frota\Penalidade.cs" />
+    <Compile Include="Dominio\Frota\ProcessoAgg\Class1.cs" />
+    <Compile Include="Dominio\Frota\ProcessoAgg\Processo.cs" />
     <Compile Include="Dominio\Frota\Qualificacao.cs" />
+    <Compile Include="Dominio\Frota\SinistroAgg\Class1.cs" />
     <Compile Include="Dominio\Frota\SituacaoDaInfracao.cs" />
     <Compile Include="Dominio\Frota\TipoPenalidade.cs" />
     <Compile Include="Dominio\Frota\VeiculoAgg\Documentacao.cs" />
@@ -107,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Aplicacao\" />
+    <Folder Include="Dominio\Documentacao\" />
     <Folder Include="Dominio\Juridico\" />
     <Folder Include="Infraestrutura\" />
   </ItemGroup>

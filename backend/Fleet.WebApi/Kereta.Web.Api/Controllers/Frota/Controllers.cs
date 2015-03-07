@@ -5,6 +5,7 @@ using Kereta.Dominio.Frota.ModeloAgg;
 using Kereta.Dominio.Frota.VeiculoAgg;
 using Kereta.Dominio.Manutencao.SistemaAgg;
 using Vvs.Domain.Seedwork.Repositorios;
+using Kereta.Dominio.Frota.ProcessoAgg;
 
 namespace Kereta.Web.Api.Controllers.Frota
 {
@@ -38,6 +39,14 @@ namespace Kereta.Web.Api.Controllers.Frota
     public class CategoriasController : BaseController<Categoria>
     {
         public CategoriasController(IRepository<Categoria> sistemaRepository) : base(sistemaRepository) { }
+    }
+
+
+
+    [RoutePrefix("frota/processos")]
+    public class ProcessosController : BaseController<Processo>
+    {
+        public ProcessosController(IRepository<Processo> sistemaRepository) : base(sistemaRepository) { }
     }
 
 }

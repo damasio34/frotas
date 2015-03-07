@@ -22,7 +22,7 @@ namespace Kereta.Dominio.Frota
             Cavalo = cavalo;
             IdCavalo = cavalo.Id;
 
-            LocalInfracao = new LocalInfracao();
+            LocalInfracao = new Localizacao();
         }
 
         public Guid IdCavalo { get; protected set; }
@@ -35,8 +35,8 @@ namespace Kereta.Dominio.Frota
         public Guid IdQualificacao { get; protected set; }
         public virtual Qualificacao Qualificacao { get; protected set; }
 
-        public LocalInfracao LocalInfracao { get; protected set; }
-        public Penalidade Penalidade { get; protected set; }
+        public virtual Localizacao LocalInfracao { get; protected set; }
+        public virtual Penalidade Penalidade { get; protected set; }
 
     }
 }
