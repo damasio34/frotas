@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Estoque\EntradaAgg\Entrada.cs" />
+    <Compile Include="Dominio\Estoque\EntradaAgg\ItemDeConsumoDaEntrada.cs" />
+    <Compile Include="Dominio\Estoque\ItemDeConsumoAgg\ItemDeConsumo.cs" />
     <Compile Include="Dominio\Financeiro\AbastecimentoAgg\Abastecimento.cs" />
     <Compile Include="Dominio\Financeiro\CustoAgg\CustoDaOrdemDeServico.cs" />
     <Compile Include="Dominio\Financeiro\ViagemAgg\Viagem.cs" />
