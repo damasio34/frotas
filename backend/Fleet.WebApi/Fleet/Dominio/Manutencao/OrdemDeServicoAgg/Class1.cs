@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Kereta.Dominio.Financeiro.CustoAgg;
 
 namespace Kereta.Dominio.Manutencao.OrdemDeServicoAgg
 {
@@ -33,6 +34,8 @@ namespace Kereta.Dominio.Manutencao.OrdemDeServicoAgg
         public Guid IdColaboradorResponsavel { get; set; }
 
         public virtual Colaborador ColaboradorResponsavel{ get; set; }
+
+        public virtual ReadOnlyCollection<CustoDaOrdemDeServico> Custos { get; set; }
 
         
 
