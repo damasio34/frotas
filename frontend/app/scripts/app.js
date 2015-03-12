@@ -1,5 +1,11 @@
 'use strict';
 
+angular.module('app', [
+  'kereta',
+  'themesApp',
+  'ngRoute'
+]);
+
 angular
   .module('themesApp', [
     'easypiechart',
