@@ -1,7 +1,13 @@
 'use strict';
 
+angular.module('app', [
+	'kereta',
+	'themesApp',
+	'ngRoute'
+]);
+
 angular
-  .module('themesApp', [
+  .module('themesApp', [  	
     'easypiechart',
     'toggle-switch',
     'ui.bootstrap',

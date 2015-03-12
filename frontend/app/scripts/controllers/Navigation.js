@@ -36,6 +36,17 @@ angular
             ]
         },
         {
+            label:"Frotas",
+            iconClasses:"fa fa-th-large",
+            children: [                
+                {
+                    label:"Modelos",
+                    iconClasses:"fa fa-camera",
+                    url:"#/frota/modelos/listar"
+                }
+            ]
+        },
+        {
             label: 'Layout Options',
             iconClasses: 'fa fa-cog',
             children: [
