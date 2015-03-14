@@ -32,8 +32,14 @@ module.exports = function (grunt) {
         tasks: ['bowerInstall']
       },
       js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+        files: ['<%= yeoman.app %>/scripts/{,*/}*.js','<%= yeoman.app %>/modulos/{,*/}*.js'],
         tasks: ['newer:jshint:all'],
+        options: {
+          livereload: true
+        }
+      },
+      html: {
+        files: ['<%= yeoman.app %>/modulos/**/*.html'],        
         options: {
           livereload: true
         }
@@ -58,7 +64,7 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/{,*/}*.html',
+          '<%= yeoman.app %>/{,*/}*.html',        
           '.tmp/assets/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -257,7 +263,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: ['*.html', 'views/{,*/}*.html'],
+          src: ['*.html', 'views/{,*/}*.html', 'modulos/{,*/}*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -297,6 +303,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
+            'modulos/**.html',
             'images/{,*/}*.{webp}',
             'fonts/*',
             'assets/**',
